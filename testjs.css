@@ -20,14 +20,31 @@ img{
     height: 170px;
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-img {
-    display: inline;
 
-}
 h2{
     display: inline;
+    color: green;
+
 }
 .address{
    position: absolute;
     right: 150px;
+}
+#jump{
+    display: none;
+    height: auto;
+    width: 200px;
+    background-color:#F7E8AF;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 3px;
+
+}
+#jump h3{
+    text-align: center;
+    color: #9A7C0E;
+}
+#jump p{
+    padding-bottom: 10px;
+    text-align: center;
 }

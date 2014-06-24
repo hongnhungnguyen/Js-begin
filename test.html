@@ -11,11 +11,11 @@
 <body>
     <div id="container">
     <div id="first">
-        <img id="abc" src="img/UNTITLED.jpg">
-        <h2 id="mess">Hong Nhung</h2>
+        <img id="abc" class="img-circle" src="img/UNTITLED.jpg">
+
         <h2 id="title">Lorem ipsum</h2>
 
-        <a id="link">link</a>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <ul id="group-ul">
             <li id="list"></li>
@@ -26,33 +26,46 @@
         </ul>
     </div>
     <div id="second"></div>
-    <div id="ehhmail">
-        <!--  Field -->
-        <div class="form-group">
 
-            <input type="email" class="form-control" id="emailmain" name="" placeholder="linh">
 
-        </div>
-
-    </div>
-    <div id="third">
-        <form id="login" class="form-inline" role="form">
-          <div id="email" class="form-group">
-            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+   <div class="form-login">
+        <form role="form">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
           </div>
-          <div id="pass" class="form-group">
-            <label class="sr-only" for="exampleInputPassword2">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
           </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Example block-level help text here.</p>
+          </div>
+            <p id="error"></p>
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Remember me
+              <input type="checkbox"> Check me out
             </label>
           </div>
-          <button type="submit" class="btn btn-default">Sign in</button>
+          <button type="submit" class="btn btn-success">Submit</button>
         </form>
-        <p id="error"></p>
+
+   </div>
+        <div class="address">
+        <address>
+              <strong>Hong Nhung</strong><br>
+
+              So 7- Ta Quang Buu street<br>
+              <abbr title="Phone">P:</abbr> 0943682993
+            </address>
+
+            <address>
+              <strong>Nguyen Thi Hong Nhung</strong><br>
+              <a href="mailto:#">elasticprovision.com</a>
+            </address>
+
     </div>
 </div>
 <script src="test.js" ></script>

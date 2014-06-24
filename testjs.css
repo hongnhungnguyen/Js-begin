@@ -15,7 +15,19 @@ ul li{
     list-style: none;
 }
 img{
-    width: 50px;
-    height: 50px;
+
+    width: 150px;
+    height: 170px;
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+img {
+    display: inline;
+
+}
+h2{
+    display: inline;
+}
+.address{
+   position: absolute;
+    right: 150px;
+}

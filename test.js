@@ -39,7 +39,7 @@ document.getElementById("second").appendChild(newp);
 window.onload = function(){
     clickimg();
 }*/
-var emailmain = document.getElementById("emailmain");
+/*var emailmain = document.getElementById("emailmain");
 emailmain.onfocus = function(){
     if(emailmain.value == "linh"){
         emailmain.value =="nhung";
@@ -68,4 +68,34 @@ function changeimg(){
 var hand = setInterval(changeimg,2000);
 myImg.onclick = function(){
     clearInterval(hand);
+}*/
+/*var myArray = ["Nguyen Nhung","Nhat Linh","Thanh Huong"];
+var index = 0;
+
+function myFunciton(){
+    var newMess = myArray[index];
+    var messElement = document.getElementById("mess");
+    messElement.innerHTML = newMess;
+    index++;
+    if(index>=myArray.length){
+        index=0;
+    }
+
 }
+window.onload = function(){
+    setInterval(myFunciton,2000);
+}*/
+function myFunciton() {
+    document.getElementById("login");
+    if (document.getElementById("email").value ==""){
+        document.getElementById("error").innerHTML = "Please provide at least an email";
+        return false;
+    }else {
+        document.getElementById("error").innerHTML="";
+        return true;
+    }
+}
+window.onload = function(){
+    myFunciton();
+}
+var ul = document.getElementById("group-ul");

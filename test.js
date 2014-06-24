@@ -77,7 +77,7 @@ document.getElementById("title").style.color="green";
 document.getElementById("title").style.fontWeight = "bold";
 document.getElementById("title").style.marginLeft = "30px";
 
-//check email
+//input email
 var emailInput = document.getElementById("email");
 
 emailInput.onfocus = function(){
@@ -125,6 +125,7 @@ function moveMyBox(){
 
     if(movePos > 900){
         clearInterval(moveHand);
+        document.getElementById("jump").style.display="";
         document.getElementById("jump").style.position = "";
         document.getElementById("jump").style.left = "";
         document.getElementById("jump").style.top = "";

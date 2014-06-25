@@ -41,7 +41,7 @@ function clickImg(){
 //change img
 var myImg = document.getElementById("abc");
 
-var imgArray = ["img/UNTITLED.jpg", "img/bb.jpg", "img/xanhla.jpg"];
+var imgArray = ["img/UNTITLED.jpg", "img/bb.jpg", "img/xanhla.jpg","img/phan.jpg","img/trang.jpg","img/vang1.jpg"];
 var indexImg = 0;
 
 function changeImg(){
@@ -132,10 +132,23 @@ function moveMyBox(){
     }
 }
 
+// Create Clock
+function show_time(){
+    var date,hour,min,sec,data;
+    date = new Date();
+    hour = date.getHours(); if(hour<10) hour= "0" +hour;
+    min = date.getMinutes(); if(min<10) min = "0" + min;
+    sec = date.getSeconds(); if(sec<10) sec= "0" + sec;
+    data = hour + ":" + min + ":" + sec;
+    document.clock.time.value = data ;
+    setTimeout("show_time()",1000);
+}
+
 window.onload = function(){
     clickImg();
     changeImg();
     changTitle();
     setTimeout(hiddenMyBox,5000);
+    show_time();
 //    checkMail()
 };

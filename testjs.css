@@ -48,3 +48,10 @@ h2{
     padding-bottom: 10px;
     text-align: center;
 }
+#clock {
+    position: absolute;
+    right: 150px;
+    top: 0;
+    font-size: 14px;
+    background-color: lightpink;
+}

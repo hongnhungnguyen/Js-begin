@@ -22,9 +22,9 @@ setTimeout(message, 90000);
 var newHeading2 = document.createElement("h2");
 var newParagraph = document.createElement("p");
 
-newHeading2.innerHTML = "login";
+newHeading2.innerHTML = "Kiem tra Email";
 
-var newParagraphChild = document.createTextNode("Vui long nhap du thong tin");
+var newParagraphChild = document.createTextNode("Vui long nhap email");
 newParagraph.appendChild(newParagraphChild);
 
 document.getElementById("second").appendChild(newHeading2);
@@ -41,7 +41,7 @@ function clickImg(){
 //change img
 var myImg = document.getElementById("abc");
 
-var imgArray = ["img/UNTITLED.jpg", "img/bb.jpg", "img/xanhla.jpg","img/phan.jpg","img/trang.jpg","img/vang1.jpg"];
+    var imgArray = ["img/UNTITLED.jpg", "img/01.jpg", "img/02.jpg","img/05.jpg","img/03.jpg","img/04.jpg"];
 var indexImg = 0;
 
 function changeImg(){
@@ -77,33 +77,7 @@ document.getElementById("title").style.color="green";
 document.getElementById("title").style.fontWeight = "bold";
 document.getElementById("title").style.marginLeft = "30px";
 
-//input email
-var emailInput = document.getElementById("email");
 
-emailInput.onfocus = function(){
-    if(emailInput.value == "Your email"){
-            emailInput.value = "";
-    }
-};
-
-emailInput.onblur = function(){
-    if(emailInput.value == ""){
-            emailInput.value ="Enter your email";
-    }
-};
-
-/* function checkMail() {
-        document.getElementById("login");
-        if (document.getElementById("email").value == "") {
-            document.getElementById("error").innerHTML = "Please provide at least an email";
-            return false;
-        } else {
-            document.getElementById("error").innerHTML = "";
-            return true;
-        }
-    }
-
-*/
 
 // move box
 var movePos = 0;
@@ -143,12 +117,34 @@ function show_time(){
     document.clock.time.value = data ;
     setTimeout("show_time()",1000);
 }
+//chang Bg-Color
+function changBgColor(){
+    var mau = prompt("Nhap mau nen cua trang","");
+    document.body.style.backgroundColor = mau;
+}
 
+//Check mail
+var result= document.getElementById("error");
+function checkMail() {
+    var check = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var email = document.getElementById("email");
+    if (!check.test(email.value)) {
+        result.innerHTML = "Dia chi Email sai";
+        email.onfocus();
+        return false;
+    }
+    else {
+        alert("Dia chi Email hop le");
+    }
+}
 window.onload = function(){
+    changBgColor();
     clickImg();
     changeImg();
     changTitle();
     setTimeout(hiddenMyBox,5000);
     show_time();
-//    checkMail()
+
+    checkMail();
+
 };

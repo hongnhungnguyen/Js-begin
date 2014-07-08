@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background: url("../img/72.JPG") no-repeat;
+    background-attachment: fixed;
+    background-size: 1366px 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.home-bg {
+    background: url("../img/72.JPG") no-repeat;
+    background-attachment: fixed;
+    background-size: 1366px 100%;
+}
+
+.bg-content {
+    background: url("../img/page_background.jpg") repeat;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------CONTAINER ---------------------------------------------------------------------------------------*/
+.container {
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*---------------------------------------------------------------------HEADER ---------------------------------------------------------------------------------------*/
+.header {
+    width: 980px;
+    height: 100px;
+    margin: 10px;
+}
+
+.marquee {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+#clock {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 3px;
+
+    color: #5cb85c;
+
+}
+
+#Drop-Down-Menu ul {
+    list-style: none;
+    overflow: hidden;
+
+}
+
+#Drop-Down-Menu > ul > li {
+    float: left;
+    border-radius: 3px;
+}
+
+#Drop-Down-Menu a {
+    font-family: Tahoma;
+    display: block;
+    line-height: 32px;
+    background-color: #5cb85c;
+    padding: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 240px;
+    text-align: center;
+}
+
+#Drop-Down-Menu li:hover > a {
+    background-color: green;
+}
+
+/* Begin dropdown */
+li > ul {
+    display: none;
+    position: absolute;
+}
+
+#Drop-Down-Menu > ul > li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+/*---------------------------------------------------------------------CONTENT ---------------------------------------------------------------------------------------*/
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#audio {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    border: rgba(255, 255, 255, 0.3) 1px solid;
+    position: absolute;
+    top: 450px;
+    left: 200px;
+}
+
+#audio:hover {
+    border: #ffffff 1px solid;
+}
+
+#audio p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#audio p:hover {
+    color: #ffffff;
+}
+
+#slide {
+    border-radius: 3px;
+
+}
+
+.homeContent {
+    display: none;
+}
+
+.aboutContent {
+    display: none;
+    z-index: 1;
+}
+
+.memberContent {
+    display: none;
+    z-index: 2;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.memberContent img {
+    border-radius: 3px;
+    border: #ffffff 1px solid;
+    display: inline;
+    width: 200px;
+    height: 350px;
+    margin: 30px;
+}
+
+.memberContent img:hover {
+    border-radius: 3px;
+    border: #FF66FF 1px solid;
+}
+
+.contactContent {
+    display: none;
+    z-index: 3;
+    width: 850px;
+    margin: 0 auto;
+
+}
+
+.left {
+    float: left;
+    width: 600px;
+}
+
+#newsSection {
+    margin-left: 20px;
+}
+
+#newsSection h4, #newsSection p {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.right {
+    float: right;
+    width: 330px;
+}
+
+.right p {
+    text-indent: 5px;
+}
+
+.photoShow {
+    margin-left: 70px;
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+}
+
+.photoShow img {
+    width: 200px;
+    height: 200px;
+}
+
+.photoShow div {
+    position: absolute;
+    z-index: 0;
+}
+
+.photoShow div.previous {
+    z-index: 1;
+}
+
+.photoShow div.current {
+    z-index: 2;
+}
+
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+#sortable li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 12px;
+    height: 18px;
+}
+
+#sortable li span {
+    position: absolute;
+    margin-left: -1.3em;
+}
+
+.toggler {
+    width: 850px;
+    height: 400px;
+
+    margin: 0 auto;
+}
+
+#draggable img {
+    display: inline !important;
+}
+
+#button {
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+#effect {
+    margin-bottom: 10px;
+    width: 850px;
+    height: 400px;
+    padding: 0.4em;
+    position: relative;
+
+}
+
+.ui-effects-transfer {
+    border: 2px dotted gray;
+}
+
+div#theDiv {
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+p, span {
+    font-size: 12pt;
+}
+
+/*---------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------*/
+
+.address {
+    position: absolute;
+    right: 100px;
+}

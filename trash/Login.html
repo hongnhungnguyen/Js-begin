@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="../css/testjs.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-login">
+    <div  class="form-login" >
+        <form role="form" method="post" id="login" action="test.html" name="login" onsubmit="return inputLogin();">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Your email">
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            <input type="password" name="pass" class="form-control" id="pass" placeholder="Your Password">
+          </div>
+
+            <button type="submit" class="btn btn-success">Register</button>
+          <button id="btn-login" type="submit" class="btn btn-success" onclick="checkLogin();">Login</button>
+        </form>
+
+   </div>
+   </div>
+<script src="../javascrip/login.js" ></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScrip Beginer</title>
+    <link href="../css/testjs.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="../jQuery/jquery-1.3.2.js"></script>
+    <!--<script type="text/javascript" src="jQuery/jquery-1.11.1.js"></script>-->
+    <script type="text/javascript">
+        // $("document").ready(function () {
+        //alert("The page ")
+        // $("p[class]").css("border","3px solid red");
+        //$("p[id^=id][lang*=en]").css("border"," 3px solid red ");
+        //$("p:first").css("border"," 3px solid red");
+        //$("p:contains(nhung)").css("border"," 3px solid red");
+        //$("p:parent").css("border"," 3px solid red");
+        //$("ul:has(li[class=a])").css("border"," 3px solid red");
+        // $("ul li:nth-child(3)").css("border"," 3px solid red");
+
+        //Create pdf-icon
+        //$("li a[href='.pdf']").after("<img src='img/small_pdf_icon.gif' />");
+
+
+        //css: form
+        //$("form :input").css("border"," 3px solid red");
+        //$("form :checkbox")c
+        //alert("There are " + $("p").length + " <p> elements");
+        //var pele = $("p").get();
+        //alert("therre are" + pele.length );
+
+        //use the find funciton
+        //$("ul").find("li.a").css("border"," 3px solid red");
+
+        //use the each function
+        /*var leftmargin = 0;
+         var border = 3;
+         $("p").each(function(){
+         $(this).css("border", border+"px solid red");
+         $(this).css("marginLeft", leftmargin);
+         border +=2;
+         leftmargin +=10;
+
+         });*/
+
+        //$("a").attr.("target","_blank");
+        //$("a").removeAttr("href");
+        //$("img").attr({  })
+
+        //$("p").wrap("<div style= //wrapAll
+        // $("p").empty();
+
+        //$("p").append("with some content appended");
+        // $("p").prepend("Hello! ");
+        //$("p:last").appendTo("p:first"); // tuong tu voi prependTo
+
+
+        //$("#height").html($("#theDiv").position().top + ", " + $("#theDiv").position().left);
+        //$("#list1").html("<li>abc</li>");
+        //var newItem = $("<p>This a new paragraph</p>");
+        //   $(".a").html(newItem.html());
+        // alert($("#list1").html());
+        //$("p:first").text("this is the last paragraph");
+        /* buildBookmarks('h3','header');
+
+         });
+         function buildBookmarks(strWhichTag, sBookMarNode){
+         var i=0;
+         var cAnchorCount = 0;
+         var oList = $("<ul id='bookMarksList'>"); // Create tje list
+
+         $("div:not([id=header])" + strWhichTag).each(function(){
+         $(this).html("<a name='bookmark "+cAnchorCount+" '></a>" + $(this).html());
+         oList.append($("<li><a href='#bookmark "+ cAnchorCount++ +"'>" + $(this).text() + "</a></li>"))
+         });
+         $("#" + sBookMarNode).append(oList);
+         }*/
+
+
+
+        // });
+        /*$(function() {
+         $("#theList tr:even").addClass("stripe1");
+         $("#theList tr:odd").addClass("stripe2");
+
+         $("#theList tr").hover(
+         function() {
+         $(this).toggleClass("highlight");
+         },
+         function() {
+         $(this).toggleClass("highlight");
+         }
+         );
+         });*/
+        /*$(function(){
+         $("div").one("click",function(){
+         $(this).css({background : "red" , cursor : "auto"});
+         });
+         })*/
+        /* $(function(){
+         $("#evtTarget").hover(highlight, highlight);
+         $("#evtTarget").toggle(fnClick1, fnClick2);
+
+
+         });
+         function highlight(){
+         $("#evtTarget").toggleClass("highlighted");
+
+         }
+         function fnClick1() {
+         $("#evtTarget").html("Click!");
+         }
+         function fnClick2() {
+         $("#evtTarget").html("Clack!");
+         }*/
+        /*$(function(){
+         $("#evtTarget").bind("mouseover mouseleave", clickChange);
+         $("#evtTarget").bind("click", function(evt) {
+         $("#evtTarget").unbind("mouseover mouseleave", clickChange);
+         $("#evtTarget").html("<p>Clicked</p>");
+         });
+
+         });
+         function clickChange(evt) {
+         $("#evtTarget").toggleClass("highlighted");
+         }*/
+        /* $(function(){
+         $(".btn-default").click(function(){
+         $("#theDiv").slideUp("normal");
+         });
+         $(".btn-primary").click(function(){
+         $("#theDiv").slideDown("fast");
+         });
+         $(".btn-success").click(function(){
+         $("#theDiv").slideToggle("slow");
+         });
+
+         });*/
+        $(function () {
+            setInterval("imgChange()", 2000);
+
+        });
+        function imgChange() {
+            var curPhoto = $("#photoShow div.current");
+            var nextPhoto = curPhoto.next();
+            if (nextPhoto.length == 0)
+                nextPhoto = $("#photoShow div:first");
+                curPhoto.removeClass("current").addClass("previous");
+                nextPhoto.css({opacity : 0.0}).addClass("current").animate({opacity:1.0},1000,function(){
+                    curPhoto.removeClass("previous");
+                });
+        }
+
+        //fade
+         /*
+          $(function(){
+          $(".btn-default").click(function(){
+          $("#theDiv").fadeTo("fast", 0.3);
+          });
+          $(".animate").click(function(){
+          $("#theDiv").animate({width : "500px"}, 1000);
+          });
+          $("#text").click(function(){
+          $("#theDiv").animate({fontSize: "24px"}, 1000);
+          })
+          })
+         */
+
+
+    </script>
+
+
+</head>
+<body>
+<div id="photoShow">
+    <div class="current">
+        <a href="#">
+            <img src="../img/20.jpg" alt="" height="100px" width="100px"></a>
+    </div>
+    <div>
+        <a href="">
+            <img src="../img/18.jpg" alt="" height="100px" width="100px"></a></div>
+    <div>
+        <a href="">
+            <img src="../img/6.jpg" alt="" height="100px" width="100px"></a></div>
+    <div>
+        <a href="">
+            <img src="../img/377082.JPG" alt="" height="100px" width="100px"></a></div>
+</div>
+<div id="theDiv">
+    <p id="text">Click here</p>
+</div>
+<button type="button" class="btn btn-default animate">Animate</button>
+
+<button type="button" class="btn btn-default">FadeIn</button>
+
+<button type="button" class="btn btn-default">slideUp</button>
+<button type="button" class="btn btn-primary">slideDown</button>
+<button type="button" class="btn btn-success">slideToggle</button>
+<div id="evtTarget" class="normal"> mouse over this div to see the effect. Click on it to change the content.</div>
+<table id="theList">
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Milk</td>
+        <td>1.99</td>
+    </tr>
+    <tr>
+        <td>Eggs</td>
+        <td>2.29</td>
+    </tr>
+    <tr>
+        <td>Butter</td>
+        <td>3.49</td>
+    </tr>
+    <tr>
+        <td>Bread</td>
+        <td>0.99</td>
+    </tr>
+    <tr>
+        <td>Pasta</td>
+        <td>1.19</td>
+    </tr>
+    <tr>
+        <td>Honey</td>
+        <td>4.39</td>
+    </tr>
+    <tr>
+        <td>Cookies</td>
+        <td>2.99</td>
+    </tr>
+    <tr>
+        <td>Apples</td>
+        <td>0.59</td>
+    </tr>
+    <tr>
+        <td>Sugar</td>
+        <td>1.78</td>
+    </tr>
+    <tr>
+        <td>Pepper</td>
+        <td>1.56</td>
+    </tr>
+    </tbody>
+</table>
+
+<div id="header">
+    <h1>Automatic Bookmark Headings Example</h1>
+</div>
+<div id="para1">
+    <h3>Paragraph 1</h3>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum
+    </p>
+    <a href="#header">Back to top</a>
+</div>
+<div id="para2">
+    <h3>Paragraph 2</h3>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum
+    </p>
+    <a href="#header">Back to top</a>
+</div>
+
+
+<p class="a">This is paragraph 1 nhung</p>
+
+<p id="id1">This is paragraph 2</p>
+
+<p class="b">This is paragraph 3</p>
+
+<p id="id2" lang="en-us">This is paragraph 4</p>
+
+<a id="image" href="../img/01.jpg"><img src="../img/01.jpg" alt="image"></a>
+
+<div id="theDiv1">
+    <div><span>Height</span><span id="height"></span></div>
+    <div><span>Width</span><span id="width"></span></div>
+    <div><span>innerHeight</span><span id="innerH"></span></div>
+    <div><span>outHeight</span><span id="outH"></span></div>
+    <div><span>offset</span><span id="offset"></span></div>
+    <div><span>position</span><span id="position"></span></div>
+
+</div>
+
+<form action="" method="get">
+
+    <table class="style">
+        <tr>
+            <td class="style1">Name</td>
+            <td><input id="name" type="text"></td>
+        </tr>
+        <tr>
+            <td class="style1">Disable Element</td>
+            <td><input id="disable" type="text" disabled="disabled"></td>
+        </tr>
+        <tr>
+            <td class="Gender">Gender</td>
+            <td>
+                <input id="male" type="radio"/>M
+                <input id="Female" type="radio" checked>F
+            </td>
+        </tr>
+        <tr>
+            <td class="style1">What product are you interested in?</td>
+            <td><input id="checkbox" type="checkbox" checked>abc</td>
+        </tr>
+        <tr>
+            <td class="cmt">Coment:</td>
+            <td><textarea id="coment" cols="40" name="s1" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td class="style1">Optional life story file</td>
+            <td><input id="file" type="file"/></td>
+        </tr>
+        <tr>
+            <td class="style1">&nbsp;</td>
+            <td><input id="submit" type="submit" value="submit">
+                <input id="reset" type="reset" value="reset">
+            </td>
+        </tr>
+    </table>
+</form>
+<div id="container">
+    <ul id="list1">
+        <li><a href="someurl.pdf">Link #1</a></li>
+        <li class="a">item 1</li>
+        <li class="a">item 2</li>
+        <li class="b">item 3</li>
+        <li class="b">item 4</li>
+    </ul>
+
+
+    <div id="first">
+        <img id="abc" class="img-circle" src="../img/UNTITLED.jpg">
+
+        <h2 id="title">Lorem ipsum</h2>
+
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        <ul id="group-ul">
+            <li id="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+        </ul>
+    </div>
+    <div id="second"></div>
+    <div id="clock">
+        <form name="clock" method="get">
+            <input type="text" name="time" size="8">
+        </form>
+    </div>
+    <div class="form-login">
+        <form role="form" method="post" id="login" action="test.html" name="login" onsubmit="return inputLogin();">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="Your email">
+            </div>
+            <!--<div class="form-group">
+              <label for="pass">Password</label>
+              <input type="password" name="pass" class="form-control" id="pass" placeholder="Your Password">
+            </div>
+
+              <button type="submit" class="btn btn-success">Register</button>-->
+            <button id="btn-login" type="submit" class="btn btn-success" onclick="checkMail();">CheckMail</button>
+        </form>
+        <p id="error"></p>
+
+    </div>
+
+    <div id="jump">
+        <h3>Welcome</h3>
+
+        <p>Welcome my page. Thank you ever so much!!!</p>
+    </div>
+    <div class="address">
+        <address>
+            <strong>Hong Nhung</strong><br>
+
+            So 7- Ta Quang Buu street<br>
+            <abbr title="Phone">P:</abbr> 0943682993
+        </address>
+
+        <address>
+            <strong>Nguyen Thi Hong Nhung</strong><br>
+            <a href="mailto:#">hongnhung@elasticprovision.com</a>
+        </address>
+
+    </div>
+</div>
+<!--<script src="test.js" ></script>-->
+
+
+</body>
+</html>

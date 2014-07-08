@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Tahoma;
+    font-size: 12px;
+
+}
+#container{
+    width: 980px;
+    margin: 0 auto;
+}
+.container-login{
+    width:600px;
+    margin: 0 auto;
+    padding-top: 100px;
+
+
+}
+ul li{
+    list-style: none;
+}
+img{
+
+    width: 150px;
+    height: 170px;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+h2{
+    display: inline;
+    color: green;
+
+}
+.address{
+   position: absolute;
+    right: 150px;
+}
+#jump{
+    display: none;
+    height: auto;
+    width: 200px;
+    background-color:#F7E8AF;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 3px;
+
+}
+#jump h3{
+    text-align: center;
+    color: #9A7C0E;
+}
+#jump p{
+    padding-bottom: 10px;
+    text-align: center;
+}
+#clock {
+    position: absolute;
+    right: 150px;
+    top: 0;
+    font-size: 14px;
+    background-color: lightpink;
+}
+div#theDiv {
+    width: 250px;
+    height: 180px;
+    margin: 10px;
+    padding: 20px;
+    background: blue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+th,td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+tr {
+    border: 1px solid gray;
+}
+td {
+    width:200px;
+    padding:3px;
+}
+th {
+    background-color:#D2E0E8;
+    color:#003366
+}
+table {
+    border: 1pt solid gray;
+}
+.highlight {
+    background-color: #ffcc00;
+    font-weight:bold;
+}
+.stripe1 {
+    background-color:#0f0;
+}
+.stripe2 {
+    background-color:#afa;
+}
+.highlight2{
+    color: red;
+
+}
+.normal {
+    width:300px;
+    height:200px;
+    background-color:Yellow;
+    font-size:18pt;
+}
+
+.highlighted {
+    background-color:Red;
+}
+#photoShow {
+    height:400px;
+    width:400px;
+}
+#photoShow div {
+    position:absolute;
+    z-index: 0;
+}
+#photoShow div.previous {
+    z-index: 1;
+}
+#photoShow div.current {
+    z-index: 2;
+}
